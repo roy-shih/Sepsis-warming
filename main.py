@@ -18,7 +18,7 @@ from keras.callbacks import ReduceLROnPlateau
 from keras.preprocessing.image import ImageDataGenerator
 from numpy.core.numeric import False_ 
 
-os.chdir('/kaggle/input/testing')
+# os.chdir('/kaggle/input/testing')
 print("GPU is","avaliable" if tf.config.list_physical_devices('GPU') else "NOT AVAILABLE")
 
 # %% [markdown]
@@ -98,7 +98,7 @@ for file in range(1, 10000):
     #num=100000+i
     #filename = "p"+str(num)
     try:
-        dataframe = pd.read_csv("./training/training/"+filename+".psv", skiprows=0, sep='|') 
+        dataframe = pd.read_csv("./training/"+filename+".psv", skiprows=0, sep='|') 
         window_size=10
         check_size=5
         #Random cut method
